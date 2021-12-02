@@ -1,0 +1,27 @@
+{% extends 'AppCoder/index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Usuario/title>
+</head>
+<body>
+{% block 'buscarusuario'  %}
+    <h1 class="text-light titulo"> Buscar Usuario</h1>
+    <form action={% url 'buscar' %} method='GET'>
+        <input type="text" name='numero' placeholder="Buscar con DNI"/>
+        <input type="submit" value="Buscar"/>
+     <ul>
+     {% if usuario %}
+         {% for usuario in usuarios %}
+            {{usuario.nombre}}
+         {% endfor %}
+    {% elif %}
+        <h3>{{error}}</h3>
+         {% else %}
+            <h3>No se encontro usuario con ese DNI</h3>
+     {% endif %}
+     </ul>
+{% endblock 'buscarusuario' %}

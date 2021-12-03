@@ -28,6 +28,7 @@ def crear_usuario(request):
 
 def buscar(request):
     usuario=None
+    usuarios=None
     error=None
     if request.method =='GET':
         dni=request.GET.get('numero', None)
@@ -38,7 +39,7 @@ def buscar(request):
             usuario=Usuarios.objects.filter(dni=dni)
         except:
             error = 'Ingrese el numero sin puntos o letras'  
-    return render(request, 'AppCoder/link2.html', {"usuarios": usuario, "error": error})
+    return render(request, 'AppCoder/link2.html', {"usuario": usuario, "error": error, "usuarios":usuarios})
                   
 def link3(request):
     return render(request,'AppCoder/link3.html',{})

@@ -24,7 +24,7 @@
         
     </head>
     <body>
-        {{respuesta}}
+        
         <!-- Navigation-->
         <nav class="navbar navbar-dark bg-dark static-top">
             <div class="container">
@@ -33,7 +33,7 @@
                 <a class="navbar-brand" href="{% url 'link3' %}">Login</a>
                 <a class="navbar-brand" href="{% url 'link1' %}">Registro</a>
                 <a class="navbar-brand" href="{% url 'buscar' %} ">Buscar Usuario</a>
-                <a class="navbar-brand" href="{% url 'link3' %}">Quienes somos</a>
+                {% comment %} <a class="navbar-brand" href="{% url 'link3' %}">Quienes somos</a> {% endcomment %}
                 <a class="navbar-brand" href="{% url 'turno' %}">Turnos</a>
             </div>
         </nav>
@@ -46,11 +46,11 @@
                             <!-- Page heading-->
                             {% block 'registrousuario'  %}
                             {% endblock 'registrousuario' %} 
+                            {% block 'buscarusuario'  %}
+                            {% endblock 'buscarusuario' %}
                             {% block 'turno'  %}
                             {% endblock 'turno' %}     
-                            {% block 'buscarusuario'  %}
-           
-                            {% endblock 'buscarusuario' %}   
+                               
                         </div>
                     </div>
                 </div>
@@ -70,18 +70,18 @@
                             <li class="list-inline-item">⋅</li>
                             <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
                         </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2021. All Rights Reserved.</p>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; Proyecto Coder 2021. All Rights Reserved.</p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                                <a href="http://www.facebook.com/"><i class="bi-facebook fs-3"></i></a>
                             </li>
                             <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
+                                <a href="https://twitter.com/home?lang=es"><i class="bi-twitter fs-3"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
+                                <a href="https://www.instagram.com/?hl=es"><i class="bi-instagram fs-3"></i></a>
                             </li>
                         </ul>
                     </div>

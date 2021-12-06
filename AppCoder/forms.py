@@ -8,4 +8,4 @@ class FormularioUsuarios(forms.Form):
 class FormularioTurno(forms.Form):
     nombre= forms.CharField()
     actividad=forms.CharField()
-    fecha=forms.DateField
+    fecha=forms.DateTimeField()

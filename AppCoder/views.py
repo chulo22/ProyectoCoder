@@ -1,8 +1,8 @@
 from typing import ContextManager
-
+from django.db.models.fields import DateTimeField
 from django.db.models.lookups import IContains
 from AppCoder.forms import FormularioTurno, FormularioUsuarios
-from AppCoder.models import Usuarios, Turno
+from AppCoder.models import Usuarios, Turnos
 from django.db.models import Q
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -49,7 +49,7 @@ def turno(request):
         formulario=FormularioTurno(request.POST)
         if formulario.is_valid():
             dato_turno=formulario.cleaned_data
-            turno= Turno(nombre=dato_turno['nombre'],actividad=dato_turno['Actividad'],fecha=dato_turno['Fecha'])
+            turno= Turnos(nombre=dato_turno['Nombre'],actividad=dato_turno['Actividad'],fecha=dato_turno['Fecha'])
             turno.save()
             formulario=FormularioTurno() 
     else:

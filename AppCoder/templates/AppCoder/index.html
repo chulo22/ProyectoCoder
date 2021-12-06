@@ -34,7 +34,7 @@
                 <a class="navbar-brand" href="{% url 'link1' %}">Registro</a>
                 <a class="navbar-brand" href="{% url 'buscar' %} ">Buscar Usuario</a>
                 <a class="navbar-brand" href="{% url 'link3' %}">Quienes somos</a>
-                <a class="navbar-brand" href="{% url 'link4' %}">Contacto</a>
+                <a class="navbar-brand" href="{% url 'turno' %}">Turnos</a>
             </div>
         </nav>
         <!-- Masthead-->
@@ -45,8 +45,9 @@
                         <div class= "text-center">
                             <!-- Page heading-->
                             {% block 'registrousuario'  %}
-        
-                            {% endblock 'registrousuario' %}   
+                            {% endblock 'registrousuario' %} 
+                            {% block 'turno'  %}
+                            {% endblock 'turno' %}     
                             {% block 'buscarusuario'  %}
            
                             {% endblock 'buscarusuario' %}   

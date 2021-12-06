@@ -1,11 +1,10 @@
 from typing import ContextManager
 
 from django.db.models.lookups import IContains
-from AppCoder.forms import FormularioUsuarios
-from AppCoder.models import Usuarios
+from AppCoder.forms import FormularioTurno, FormularioUsuarios
+from AppCoder.models import Usuarios, Turno
 from django.db.models import Q
 from django.shortcuts import render
-from AppCoder import models
 from django.http import HttpResponse
 
 # Create your views here.
@@ -44,12 +43,17 @@ def buscar(request):
 def link3(request):
     return render(request,'AppCoder/link3.html',{})
 
-def link4(request):
-    return render(request,'AppCoder/link4.html',{})    
-    
-    
-
-
-
+def turno(request):
+    turno=None
+    if request.method == "POST":
+        formulario=FormularioTurno(request.POST)
+        if formulario.is_valid():
+            dato_turno=formulario.cleaned_data
+            turno= Turno(nombre=dato_turno['nombre'],actividad=dato_turno['Actividad'],fecha=dato_turno['Fecha'])
+            turno.save()
+            formulario=FormularioTurno() 
+    else:
+        formulario=FormularioTurno()        
+    return render(request,'AppCoder/turno.html', {'turno':turno, 'formulario': formulario})
 
 

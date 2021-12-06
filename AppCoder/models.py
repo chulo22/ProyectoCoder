@@ -13,7 +13,14 @@ class Actividad(models.Model):
     actividad_realizar=models.CharField(max_length=20)
     profesor=models.CharField(max_length=20)
     horarios=models.DateTimeField()
+
 class InformacionCliente(models.Model):
     nro_afiliado=models.CharField(max_length=20)
     obra_social=models.CharField(max_length=20)
-    
+
+class Turno(models.Model):
+    nombre = Usuarios.nombre
+    actividad = Actividad.actividad_realizar
+    fecha_turno = models.DateField
+
+

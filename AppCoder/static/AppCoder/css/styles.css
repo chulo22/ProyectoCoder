@@ -595,7 +595,7 @@ progress {
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "— ";
 }
 
 .img-fluid {
@@ -11381,10 +11381,8 @@ footer.footer {
 }
 .titulo{
   color:#fff;
-  font-family: 'Trade Winds', cursive;
+  font-family: 'Bebas Neue';
   font-size: 80px;
 }
-
-
 
 

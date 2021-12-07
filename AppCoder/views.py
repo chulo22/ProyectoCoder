@@ -43,17 +43,18 @@ def buscar(request):
 def link3(request):
     return render(request,'AppCoder/link3.html',{})
 
-def turno(request):
-    turno=None
+def turnos(request):
+    turno= None
     if request.method == "POST":
         formulario=FormularioTurno(request.POST)
         if formulario.is_valid():
             dato_turno=formulario.cleaned_data
-            turno= Turnos(nombre=dato_turno['Nombre'],actividad=dato_turno['Actividad'],fecha=dato_turno['Fecha'])
+            turno= Turnos(nombre=dato_turno['nombre'],actividad=dato_turno['actividad'],fecha_turno=dato_turno['fecha'])
             turno.save()
-            formulario=FormularioTurno() 
+            mensaje = "Se ha guardado tu turno"
+            return render(request,'AppCoder/index.html', {'turno':turno, 'mensaje': mensaje})
     else:
         formulario=FormularioTurno()        
-    return render(request,'AppCoder/turno.html', {'turno':turno, 'formulario': formulario})
+    return render(request,'AppCoder/turnos.html', {'turno':turno, 'formulario': formulario})
 
 

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Proyecto - Giuliano Baglivi</title>
+        <title>Proyecto MarcosMacaroni</title>
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'AppCoder/css/styles.css' %}" rel="stylesheet" type="text/css"/>
         <!-- Favicon-->
@@ -20,21 +20,18 @@
         {% comment %} fuente pagina registro {% endcomment %}
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         
     </head>
     <body>
-        
         <!-- Navigation-->
         <nav class="navbar navbar-dark bg-dark static-top">
             <div class="container">
                 <a class="navbar-brand" href="#!">PROYECTO CODER</a>
-
-                <a class="navbar-brand" href="{% url 'link3' %}">Login</a>
                 <a class="navbar-brand" href="{% url 'link1' %}">Registro</a>
                 <a class="navbar-brand" href="{% url 'buscar' %} ">Buscar Usuario</a>
-                {% comment %} <a class="navbar-brand" href="{% url 'link3' %}">Quienes somos</a> {% endcomment %}
-                <a class="navbar-brand" href="{% url 'turno' %}">Turnos</a>
+                <a class="navbar-brand" href="{% url 'turnos' %}">Turnos</a>
+                {% comment %} <a class="navbar-brand" href="{% url 'link4' %}">Link 4</a> {% endcomment %}
             </div>
         </nav>
         <!-- Masthead-->
@@ -44,13 +41,19 @@
                     <div class="col-xl-3">
                         <div class= "text-center">
                             <!-- Page heading-->
+                            <h9 class='text-light'>{{mensaje}}</h9>
+                            <h9 class='text-light'>{{mensaje2}} {{turno.fecha}}</h9>
                             {% block 'registrousuario'  %}
-                            {% endblock 'registrousuario' %} 
+
+                            {% endblock 'registrousuario' %}
                             {% block 'buscarusuario'  %}
-                            {% endblock 'buscarusuario' %}
-                            {% block 'turno'  %}
-                            {% endblock 'turno' %}     
-                               
+                            
+                            {% endblock 'buscarusuario' %}    
+                
+                            {% block 'turnos' %}
+                            
+                            {% endblock 'turnos' %}  
+                       
                         </div>
                     </div>
                 </div>
@@ -70,18 +73,18 @@
                             <li class="list-inline-item">⋅</li>
                             <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
                         </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Proyecto Coder 2021. All Rights Reserved.</p>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2021. All Rights Reserved.</p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item me-4">
-                                <a href="http://www.facebook.com/"><i class="bi-facebook fs-3"></i></a>
+                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
                             </li>
                             <li class="list-inline-item me-4">
-                                <a href="https://twitter.com/home?lang=es"><i class="bi-twitter fs-3"></i></a>
+                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.instagram.com/?hl=es"><i class="bi-instagram fs-3"></i></a>
+                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -99,3 +102,25 @@
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

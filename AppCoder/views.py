@@ -38,7 +38,7 @@ def buscar(request):
             usuario=Usuarios.objects.filter(dni=dni)
         except:
             error = 'Ingrese el numero sin puntos o letras'  
-    return render(request, 'AppCoder/link2.html', {"usuario": usuario, "error": error, "usuarios":usuarios})
+    return render(request, 'AppCoder/buscar.html', {"usuario": usuario, "error": error, "usuarios":usuarios})
                   
 def link3(request):
     return render(request,'AppCoder/link3.html',{})

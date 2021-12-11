@@ -8,7 +8,7 @@
     <title>Lista Usuarios</title>
 </head>
 <body>
-{% block 'buscarusuario'  %}
+{% block 'listausuarios'  %}
         <h1 class='titulo'> Lista usuarios </h1>
         <ul class='text-light'>
             {% for usuario in usuarios %}
@@ -19,5 +19,5 @@
          {% endfor %}
         </ul>
 </body>
-{% endblock 'buscarusuario' %}
+{% endblock 'listausuarios' %}
 </html>

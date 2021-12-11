@@ -10,7 +10,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'AppCoder/css/styles.css' %}" rel="stylesheet" type="text/css"/>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
         <!-- Google fonts-->
@@ -27,11 +27,11 @@
         <!-- Navigation-->
         <nav class="navbar navbar-dark bg-dark static-top">
             <div class="container">
-                <a class="navbar-brand" href="#!">PROYECTO CODER</a>
+                <a class="navbar-brand" href="#!">Strength App</a>
                 <a class="navbar-brand" href="{% url 'link1' %}">Registro</a>
                 <a class="navbar-brand" href="{% url 'link3' %} ">Lista Usuarios</a>
                 <a class="navbar-brand" href="{% url 'turnos' %}">Turnos</a>
-                {% comment %} <a class="navbar-brand" href="{% url 'link4' %}">Link 4</a> {% endcomment %}
+                {% comment %} <a class="navbar-brand" href="{% url 'buscar' %}">Buscar</a> {% endcomment %}
             </div>
         </nav>
         <!-- Masthead-->
@@ -46,9 +46,9 @@
                             {% block 'registrousuario'  %}
 
                             {% endblock 'registrousuario' %}
-                            {% block 'buscarusuario'  %}
+                            {% block 'buscarturno'  %}
                             
-                            {% endblock 'buscarusuario' %}    
+                            {% endblock 'buscarturno' %}    
                 
                             {% block 'turnos' %}
                             
@@ -73,18 +73,18 @@
                             <li class="list-inline-item">⋅</li>
                             <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
                         </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2021. All Rights Reserved.</p>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; Strength App 2021. All Rights Reserved.</p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                                <a href="http://www.facebook.com/"><i class="bi-facebook fs-3"></i></a>
                             </li>
                             <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
+                                <a href="https://twitter.com/home?lang=es"><i class="bi-twitter fs-3"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
+                                <a href="https://www.instagram.com/?hl=es"><i class="bi-instagram fs-3"></i></a>
                             </li>
                         </ul>
                     </div>
